@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+:root {
+  --bg-body: linear-gradient(90deg, #250141 0%, #51008f 100%);
+  --color-font-one: #ffffff;
+  --bg-hover: #292929;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg-body);
+  font-family: "Inknut Antiqua", serif;
+}
+nav {
+  width: 100%;
+  padding: 1.4rem 7%;
+  background: var(--bg-body);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .container i {
+  font-size: 50px;
+  color: var(--color-font-one);
+}
+nav .container .fa-bars-staggered {
+  font-size: 20px;
+  display: none;
+}
+nav .container ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  transition: 0.3s ease-out;
+}
+nav .container ul li a {
+  padding: 5px 10px;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--color-font-one);
+  text-decoration: none;
+  transition: 0.3s ease-out;
+}
+nav .container ul li a:hover {
+  border-radius: 10px;
+  background-color: var(--bg-hover);
+}
+#hero {
+  width: 100%;
+  height: 100vh;
+  padding: 1.4rem 7%;
+}
+#hero .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#hero .container .content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 36px;
+  color: var(--color-font-one);
+}
+#hero .container .content h1 {
+  font-size: 30px;
+}
+#hero .container .content .sosmed {
+  width: 100%;
+  font-size: 30px;
+  color: var(--color-font-one);
+}
+#hero .container .content .sosmed a {
+  color: var(--color-font-one);
+  margin-right: 10px;
+}
+#hero .container .img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+#hero .container .img img {
+  width: 100%;
+  height: 530px;
+  align-self: center;
+  -webkit-mask-image: url(../../asets/imgs/blend.png);
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+#about {
+  width: 100%;
+  height: 100vh;
+  padding: 1.4rem 7%;
+}
+#about h1 {
+  text-align: center;
+  color: var(--color-font-one);
+  font-size: 25px;
+}
+#about h2 {
+  text-align: center;
+  color: var(--color-font-one);
+}
+#about .container {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#about .container .card {
+  width: 30%;
+  height: 370px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 50px;
+  transition: .3s ease-out;
+}
+#about .container .card i {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-hover);
+  font-size: 50px;
+  background-color: var(--color-font-one);
+  border-radius: 50px;
+}
+#about .container .card p {
+  color: var(--color-font-one);
+  font-size: 12px;
+  font-weight: 300;
+}
+#about .container .card iframe {
+  width: 100%;
+  height: 50%;
+}
+#about .container .card:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  nav .container ul {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding-top: 20px;
+    background: #51008fc1;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+  }
+  nav .container ul.active {
+    right: 0;
+  }
+  nav .container ul li a {
+    padding: 5px 70px;
+    font-size: 12px;
+  }
+  nav .container .fa-bars-staggered {
+    display: inline-block;
+    cursor: pointer;
+  }
+  #hero .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #hero .container .content {
+    width: 100%;
+    height: 40%;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #hero .container .content h1 {
+    font-size: 25px;
+  }
+  #hero .container .img {
+    width: 100%;
+    height: 60%;
+  }
+  #hero .container .img img {
+    width: 100%;
+    height: 100%;
+  }
+  #about .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #about .container .card {
+    width: 100%;
+  }
+}
