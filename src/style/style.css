@@ -157,7 +157,7 @@ nav .container ul li a:hover {
 }
 @media (max-width: 600px) {
   nav .container ul {
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -174,7 +174,6 @@ nav .container ul li a:hover {
     right: 0;
   }
   nav .container ul li a {
-    padding: 5px 70px;
     font-size: 12px;
   }
   nav .container .fa-bars-staggered {
@@ -199,7 +198,7 @@ nav .container ul li a:hover {
     text-align: center;
   }
   #hero .container .content h1 {
-    font-size: 25px;
+    font-size: 20px;
   }
   #hero .container .img {
     width: 100%;
@@ -212,6 +211,12 @@ nav .container ul li a:hover {
   #about .container {
     flex-direction: column;
     gap: 20px;
+  }
+  #about h1 {
+    font-size: 20px;
+  }
+  #about h2 {
+    font-size: 15px;
   }
   #about .container .card {
     width: 100%;
